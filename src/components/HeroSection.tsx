@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Bluetooth } from "lucide-react";
 
@@ -13,10 +12,10 @@ const HeroSection = () => {
       
       {/* Phone background image */}
       <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute top-0 right-0 w-2/3 h-full bg-cover bg-no-repeat opacity-30"
         style={{
           backgroundImage: 'url(/lovable-uploads/7fcbb3c5-02f9-4a2f-933a-8bef0656eac3.png)',
-          backgroundPosition: 'top right'
+          backgroundPosition: 'center right'
         }}
       ></div>
       
