@@ -11,8 +11,8 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-cyber/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      {/* Phone with Bluetooth pulse animations */}
-      <div className="absolute bottom-0 right-8 hidden lg:block pointer-events-none">
+      {/* Phone with Bluetooth pulse animations - Desktop */}
+      <div className="absolute top-0 right-0 hidden lg:block pointer-events-none">
         {/* Bluetooth pulse rings behind phone */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
           <div className="w-96 h-96 border border-blue-electric/20 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
@@ -20,13 +20,12 @@ const HeroSection = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-cyber/20 rounded-full animate-ping" style={{ animationDuration: '2.5s', animationDelay: '1s' }}></div>
         </div>
         
-        {/* Phone image with gradient shadow */}
+        {/* Phone image */}
         <div className="relative z-10">
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-electric/30 via-purple-cyber/20 to-transparent blur-2xl transform translate-y-8 scale-110"></div>
           <img 
             src="/lovable-uploads/da1afb44-6d5a-48f7-9be8-8d12dbf9a7cd.png" 
             alt="Blue Social App Interface" 
-            className="w-auto h-[75vh] max-h-[600px] object-contain drop-shadow-2xl glow-blue"
+            className="w-auto h-screen max-h-screen object-cover object-left"
           />
         </div>
       </div>
@@ -40,17 +39,16 @@ const HeroSection = () => {
         </div>
         
         <div className="relative z-10">
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-electric/30 via-purple-cyber/20 to-transparent blur-xl transform translate-y-4 scale-110"></div>
           <img 
             src="/lovable-uploads/da1afb44-6d5a-48f7-9be8-8d12dbf9a7cd.png" 
             alt="Blue Social App Interface" 
-            className="w-auto h-48 object-contain drop-shadow-xl glow-blue"
+            className="w-auto h-48 object-contain"
           />
         </div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center lg:text-left lg:max-w-2xl">
+        <div className="max-w-4xl mx-auto text-center lg:text-left lg:max-w-xl xl:max-w-2xl">
           {/* Hero Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Turn{" "}
@@ -84,7 +82,7 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          {/* Hero Graphic - only show on larger screens when phone is visible */}
+          {/* Hero Graphic with Bluetooth Animation - only show on mobile when phone is not visible */}
           <div className="relative max-w-2xl mx-auto lg:hidden">
             <div className="glass-card p-8 rounded-3xl glow-blue">
               <div className="relative flex items-center justify-center space-x-8">
