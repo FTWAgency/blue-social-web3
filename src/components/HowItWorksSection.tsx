@@ -1,21 +1,19 @@
 
-import { Bluetooth, Circle, Star } from "lucide-react";
-
 const steps = [
   {
-    icon: Bluetooth,
+    gif: "/lovable-uploads/onboarding_01_gif_updd_2.gif",
     title: "Discover people nearby",
     description: "Your phone automatically detects other Blue Social users in your proximity using Bluetooth mesh technology.",
     color: "from-blue-electric to-cyan-400"
   },
   {
-    icon: Circle,
+    gif: "/lovable-uploads/Tour 2.gif",
     title: "Break the ice",
     description: "Send a friendly message or react to their profile. Start meaningful conversations with people around you.",
     color: "from-cyan-400 to-purple-cyber"
   },
   {
-    icon: Star,
+    gif: "/lovable-uploads/Tour 3.gif",
     title: "Earn tokens for interacting",
     description: "Get rewarded with $BLUE tokens for every genuine social interaction. Build your on-chain social graph.",
     color: "from-purple-cyber to-pink-500"
@@ -52,9 +50,13 @@ const HowItWorksSection = () => {
                   {index + 1}
                 </div>
                 
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-glow`}>
-                  <step.icon className="w-8 h-8 text-white" />
+                {/* GIF Icon */}
+                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-glow overflow-hidden`}>
+                  <img 
+                    src={step.gif} 
+                    alt={step.title}
+                    className="w-10 h-10 object-cover rounded-full"
+                  />
                 </div>
                 
                 {/* Content */}
