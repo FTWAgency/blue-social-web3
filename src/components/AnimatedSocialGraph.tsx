@@ -47,6 +47,25 @@ const AnimatedSocialGraph = () => {
     const animateConnections = () => {
       let index = 0;
       const interval = setInterval(() => {
+        // Check if we're still within bounds
+        if (index >= initialConnections.length) {
+          clearInterval(interval);
+          // Reset after a delay and restart
+          setTimeout(() => {
+            setNodes(prev => prev.map(node => ({ ...node, active: node.id === 'center' })));
+            setConnections(prev => prev.map(conn => ({ ...conn, active: false })));
+            setTimeout(() => animateConnections(), 1000);
+          }, 2000);
+          return;
+        }
+
+        // Get the current connection safely
+        const currentConnection = initialConnections[index];
+        if (!currentConnection) {
+          index++;
+          return;
+        }
+
         setConnections(prev => 
           prev.map((conn, i) => 
             i === index ? { ...conn, active: true } : conn
@@ -55,8 +74,7 @@ const AnimatedSocialGraph = () => {
         
         setNodes(prev => 
           prev.map(node => {
-            const connection = initialConnections[index];
-            if (node.id === connection.to) {
+            if (node.id === currentConnection.to) {
               return { ...node, active: true };
             }
             return node;
@@ -64,19 +82,15 @@ const AnimatedSocialGraph = () => {
         );
 
         index++;
-        if (index >= initialConnections.length) {
-          clearInterval(interval);
-          // Reset after a delay and restart
-          setTimeout(() => {
-            setNodes(prev => prev.map(node => ({ ...node, active: node.id === 'center' })));
-            setConnections(prev => prev.map(conn => ({ ...conn, active: false })));
-            setTimeout(animateConnections, 1000);
-          }, 2000);
-        }
       }, 800);
     };
 
-    setTimeout(animateConnections, 1000);
+    const timeoutId = setTimeout(() => animateConnections(), 1000);
+    
+    // Cleanup function to prevent memory leaks
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
