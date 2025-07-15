@@ -1,8 +1,22 @@
 
+import AnimatedSocialGraph from './AnimatedSocialGraph';
+
 const Footer = () => {
   return (
     <footer className="border-t border-white/10 bg-blue-dark/50 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-12">
+        {/* Building the Future Section */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold gradient-text mb-4">Building the Future</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Watch how proximity interactions create an ever-expanding social graph, 
+              connecting people in real-time and building the foundation of decentralized social networks.
+            </p>
+          </div>
+          <AnimatedSocialGraph />
+        </div>
+
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
