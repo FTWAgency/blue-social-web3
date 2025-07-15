@@ -50,12 +50,12 @@ const HowItWorksSection = () => {
                   {index + 1}
                 </div>
                 
-                {/* GIF Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mb-6 mx-auto animate-pulse-glow overflow-hidden`}>
+                {/* GIF */}
+                <div className="w-24 h-24 mb-6 mx-auto">
                   <img 
                     src={step.gif} 
                     alt={step.title}
-                    className="w-10 h-10 object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
                 
