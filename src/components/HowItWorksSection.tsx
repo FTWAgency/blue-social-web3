@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
                 </div>
                 
                 {/* GIF */}
-                <div className="w-24 h-24 mb-6 mx-auto">
+                <div className="w-40 h-40 mb-6 mx-auto">
                   <img 
                     src={step.gif} 
                     alt={step.title}
