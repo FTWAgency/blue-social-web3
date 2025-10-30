@@ -40,7 +40,7 @@ const BuiltOnBaseSection: React.FC = () => {
       tag: "Offline Layer",
       description: "Proprietary Bluetooth mesh protocol enabling encrypted, real-world discovery, messaging and payments without WiFi or internet.",
       gradient: "from-purple-600 to-purple-700",
-      icon: "🔵",
+      icon: "/assets/blue-logo.png",
       iconBg: "bg-purple-500/20"
     }
   ];
@@ -192,7 +192,7 @@ const BuiltOnBaseSection: React.FC = () => {
                       <img 
                         src={layer.icon} 
                         alt={`${layer.title} logo`}
-                        className="w-10 h-10 object-contain"
+                        className={layer.title === "Blue Protocol" ? "w-full h-full object-cover" : "w-14 h-14 object-contain"}
                       />
                     ) : (
                       <span className="text-2xl">{layer.icon}</span>

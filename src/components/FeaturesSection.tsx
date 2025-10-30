@@ -1,11 +1,22 @@
 
-import { Bluetooth, Circle, Star, Circle as GlobalIcon, Lock, User, MessageCircle } from "lucide-react";
+import { Bluetooth, Circle, Star, Circle as GlobalIcon, Lock, User } from "lucide-react";
 
 // Custom icon component for Unlock Contact Info
 const UnlockContactIcon = () => (
   <div className="relative w-8 h-8">
     <User className="w-6 h-6 text-white absolute inset-0 m-auto" />
     <Lock className="w-4 h-4 text-white absolute -top-1 -right-1" />
+  </div>
+);
+
+// Custom icon component for Bitchat
+const BitchatIcon = () => (
+  <div className="w-16 h-16 flex items-center justify-center">
+    <img 
+      src="/assets/bitchat logo.png" 
+      alt="Bitchat logo" 
+      className="w-14 h-14 object-contain"
+    />
   </div>
 );
 
@@ -32,17 +43,17 @@ const features = [
     comingSoon: false
   },
   {
+    icon: BitchatIcon,
+    title: "Public Chat powered by Bitchat",
+    description: "Decentralized peer-to-peer messaging over Bluetooth mesh networks. No internet required, no servers, no phone numbers. Censorship-resistant communication.",
+    gradient: "from-orange-400 to-purple-cyber",
+    comingSoon: true
+  },
+  {
     icon: Star,
     title: "NFT Badges & Gamification",
     description: "Collect unique NFT badges for different types of interactions. Level up your social game with achievements and rewards.",
     gradient: "from-yellow-400 to-orange-400",
-    comingSoon: true
-  },
-  {
-    icon: MessageCircle,
-    title: "Encrypted DMs for Real Connections",
-    description: "Chat privately with people you've met in real-life. Messages are encrypted, secure, and tied to usernames — not phone numbers.",
-    gradient: "from-orange-400 to-purple-cyber",
     comingSoon: true
   },
   {

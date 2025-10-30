@@ -1,6 +1,7 @@
 
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import BuyBlueTokensSection from "@/components/BuyBlueTokensSection";
 import BackedByBelieversSection from "@/components/BackedByBelieversSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import BuiltOnBaseSection from "@/components/BuiltOnBaseSection";
@@ -15,6 +16,7 @@ const Index = () => {
     <div className="min-h-screen bg-blue-dark overflow-x-hidden snap-y snap-mandatory">
       <HeroSection />
       <HowItWorksSection />
+      <BuyBlueTokensSection />
       <BackedByBelieversSection />
       <FeaturesSection />
       <BuiltOnBaseSection />

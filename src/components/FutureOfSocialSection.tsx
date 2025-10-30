@@ -404,7 +404,7 @@ const FutureOfSocialSection = () => {
                 Download App
               </button>
               <button className="border border-blue-electric text-blue-electric hover:bg-blue-electric/10 glow-blue transition-all duration-300 px-8 py-3 rounded-lg font-semibold">
-                Learn More
+                Whitepaper
               </button>
             </div>
           </div>

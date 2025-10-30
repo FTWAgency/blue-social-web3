@@ -3,19 +3,19 @@ const teamMembers = [
   {
     name: "Jose Montero",
     role: "CEO, Growth Hacker, Web3 Native",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: "/assets/Jose%20CEO.JPG",
     description: "Visionary leader with deep expertise in Web3 ecosystems and growth strategies."
   },
   {
     name: "Jose Montero Sr.",
     role: "CFO/COO, MIT Grad, Ex-Kaiser",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "/assets/Jose%20sr.jpg",
     description: "MIT graduate with extensive experience in operations and financial strategy at Fortune 500 companies."
   },
   {
     name: "Javier Calderon",
     role: "Emerging Tech, Blockchain Expert",
-    image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face",
+    image: "/assets/Javierphoto.png",
     description: "Blockchain technology expert specializing in emerging tech and decentralized systems."
   }
 ];
